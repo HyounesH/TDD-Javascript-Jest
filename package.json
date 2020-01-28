@@ -1,0 +1,70 @@
+{
+  "name": "tdd-workshop",
+  "version": "1.0.0",
+  "description": "Materials for the workshop \"Building Quality JavaScript With Test-Driven Development\", by Steven J Hicks.",
+  "private": true,
+  "scripts": {
+    "verify": "node ./module-0/verify.js && jest --watchAll -i --config ./module-0/jest.config.js",
+    "test": "jest",
+    "test-watch-all": "jest --watch",
+    "test-module-1": "jest --watch -i --config ./module-1/jest.config.js",
+    "test-module-2": "jest --watch -i --config ./module-2/jest.config.js",
+    "test-module-3": "jest --watch -i --config ./module-3/jest.config.js",
+    "test-module-4ab": "jest --watch -i --config ./module-4ab/jest.config.js",
+    "build-module-4ab": "webpack --config ./module-4ab/webpack.config.js",
+    "serve-module-4ab": "concurrently --names \"WEB,API\" -c \"bgBlue.bold,bgMagenta.bold\" \"npm run serve-module-4ab-web\" \"npm run serve-module-4ab-api\"",
+    "serve-module-4ab-web": "webpack-dev-server --config ./module-4ab/webpack.config.js",
+    "serve-module-4ab-api": "nodemon --exec babel-node -- ./module-4ab/api/server.js",
+    "test-module-4c": "jest --watch -i --config ./module-4c/jest.config.js",
+    "test-module-5": "jest --watch -i --config ./module-5/jest.config.js",
+    "build-module-5": "webpack --config ./module-5/webpack.config.js",
+    "serve-module-5": "webpack-dev-server --config ./module-5/webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pepopowitz/tdd-workshop.git"
+  },
+  "keywords": [
+    "TDD",
+    "JavaScript",
+    "workshop",
+    "Jest"
+  ],
+  "author": "Steven J Hicks",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pepopowitz/tdd-workshop/issues"
+  },
+  "homepage": "https://github.com/pepopowitz/tdd-workshop#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.7.5",
+    "@babel/core": "^7.7.5",
+    "@babel/node": "^7.7.4",
+    "@babel/plugin-transform-runtime": "^7.7.6",
+    "@babel/preset-env": "^7.7.6",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "concurrently": "^5.0.1",
+    "css-loader": "^3.3.0",
+    "html-looks-like": "^1.0.3",
+    "html-webpack-plugin": "^3.2.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^24.9.0",
+    "nodemon": "^2.0.1",
+    "style-loader": "^1.0.1",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.7.0",
+    "@babel/runtime": "^7.7.6",
+    "axios": "^0.19.0",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "form-serialize": "^0.7.2",
+    "lodash": "^4.17.15"
+  }
+}
