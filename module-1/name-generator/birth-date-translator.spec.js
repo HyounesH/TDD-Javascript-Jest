@@ -12,4 +12,9 @@ describe('module-1/name-generator/birth-date-translator', () => {
 
     expect(result).toEqual('Associative Arrays');
   });
+  
+  it('translates hamdane younes birth date', () => {
+    const result = translateBirthDate(31);
+    expect(result).toEqual('Vue');
+  });
 });

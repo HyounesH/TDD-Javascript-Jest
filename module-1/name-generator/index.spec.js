@@ -18,10 +18,10 @@ describe('module-1/name-generator/index', () => {
       firstName: 'Bartleby',
       middleName: 'Burtleby',
       lastName: 'Turtle',
-      birthMonth: 'April',
+      birthMonth: 'June',
       birthDate: 8,
     });
 
-    expect(result).toEqual('Sunny Sugar Darkness, Whisperer of JSX');
+    expect(result).toEqual('Sunny Sugar Darkness, Conjurer of JSX');
   });
 });
